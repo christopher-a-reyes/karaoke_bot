@@ -11,6 +11,7 @@ intents: Intents = Intents.default()
 intents.message_content = True  # NOQA
 client: Client = Client(intents = intents)
 
+
 async def send_message(message: Message, user_message: str) -> None:
     if not user_message:
         print('(Message was empty because intents were not enabled probably)')
